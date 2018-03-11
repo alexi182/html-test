@@ -3,6 +3,15 @@
     font-weight: 300;
     line-height: 30px;
     color: #665665;
+    margin-top: 15px!important;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.tac {
+    text-align: center;
 }
 
 .task-play {
@@ -11,7 +20,7 @@
     width: 49px;
     position: absolute;
     top: -14px;
-    right: 9%;
+    right: 8%;
     color: #164f88;
     font-size: 50px;
     fill:red;
@@ -28,16 +37,63 @@
 }
 
 .test-words__item {
-    margin: 0 auto 15px;
-    position: relative;
-    width: 265px;
-    height: 269px;
-    transition: .3s;
-    cursor: pointer;
 }
 
-.test-words__item_border {
+.flex-test {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-test-just-even {
+    justify-content: space-evenly;
+}
+
+.flex-test-space-between {
+    justify-content: space-between;
+}
+
+.flex-test-alcenter {
+    align-items: center;
+}
+
+.test-words__item_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.test-word__item-block {
+    /*display: flex;*/
+    /*align-items: center;*/
+    margin-bottom: 15px;
+    font: 20px robotoregular, sans-serif;
+}
+
+.test-word__item-block > span {
+    margin-right: 5px;
+    font-size: 25px;
+}
+
+.test-words__content {
+   /* width: 265px;
+    height: 269px;*/
+    transition: .3s;
+    cursor: pointer;
+    margin: 0 auto 15px;
+    position: relative;
+    padding: 15px 25px;
+}
+
+.test-border {
     border: 2px solid #cccccc;
+    outline: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.test-border:hover {
+    outline-color: #cccccc;
 }
 
 .test-words__item_clock:after {
@@ -53,17 +109,12 @@
 }
 
 .test-words__img {
-    margin-top: 20px;
-    margin-left: 19px;
+    /*margin-top: 20px;*/
+    /*margin-left: 19px;*/
 }
 
 .test-words__item_tree {
     display: inline-block;
-}
-
-.test-words__item_flex {
-    display: flex;
-    justify-content: space-between;
 }
 
 .test-words__num {
@@ -75,5 +126,82 @@
     padding: 6px 14px;
     box-sizing: border-box;
     font-size: 24px;
-    margin: 0 auto;
+    margin: 15px auto 0;
 }
+
+.svg-sun {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.test-choise-block {
+    margin-top: 20px;
+}
+
+.test-choise {
+    width: 85px;
+    height: 38px;
+    box-sizing: border-box;
+    border-radius: 19px;
+    border: 3px solid #000000;
+    text-align: center;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+.mb15 {
+    margin-bottom:15px;
+}
+
+.test-choise__brown{
+    border: 3px solid #e9a503;
+}
+
+.test-choise__dark-blue{
+    border: 3px solid #044f87;
+}
+
+.test-choise__red{
+    border: 3px solid #e93e03;
+}
+
+.test-choise__dark-purple{
+    border: 3px solid #6147e5;
+}
+
+.test-choise__white-green{
+    border: 3px solid #7be547;
+}
+
+.test-choise__white-pink{
+    border: 3px solid #e9037f;
+}
+
+.test-choise__white-blue{
+    border: 3px solid #b1f1fa;
+}
+
+.test-choise__purple{
+    border: 3px solid #c603e9;
+}
+
+.test-choise__green{
+    border: 3px solid #186723;
+}
+
+.test-choise__cancel{
+    border: 3px solid #32d7c0;
+    color: #32d7c0;
+}
+
+.test-choise__rebus {
+    width: 102px;
+    height: 102px;
+    box-sizing: border-box;
+    padding: 17px;
+    border-radius: 15px;
+    border: 1px solid #32d7c0;
+}
+
+
