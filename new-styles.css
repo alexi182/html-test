@@ -46,6 +46,10 @@
     text-align: right;
 }
 
+.tal {
+    text-align: left;
+}
+
 .task-play {
     transition: .3s;
     display: inline-block;
@@ -307,20 +311,94 @@
 }
 
 .test-words__block-head {
-    padding: 0px 12px 0px 20px;
+    padding: 1px 12px 1px 20px;
     cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+.test-words__block-head:hover {
+    background: #adcfe6;
 }
 
 .test-words__block-head span {
     display: inline-block;
-    top: 4px;
-    left: 39px;
-    position: relative;
+    transition: transform 0.5s;
+    top: 3px;
+    right: 5px;
+    position: absolute;
     width: 21px;
     height: 21px;
     background: url("img/select-icon.png") no-repeat;
 }
 
+.content-active .test-words__block-head span{
+    transform: rotate(180deg);
+}
+
 .test-words__block-content-item {
     padding: 10px 12px;
+    display: none;
 }
+
+.test-words__block-content {
+    margin-bottom: 18px;
+}
+
+.test-words__block-content:last-of-type {
+    margin-bottom:  0;
+}
+
+.test-words__letter-block {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.test-words__letter-block span {
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 35px;
+    height: 37px;
+    border-radius: 15px;
+    border: 2px solid #32d7c0;
+    box-sizing: border-box;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.test-words__rebus-table {
+    margin: 0 auto;
+}
+
+.test-words__rebus-table td{
+    margin: 0 auto;
+    min-width: 110px;
+    border: 1px solid #818181;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.birds-block {
+    font-size: 23px;
+}
+
+.birds-block .test-words__input {
+    padding-top: 0;
+}
+
+.birds-block .test-words__item:first-of-type .test-words__cell{
+    margin-bottom: 34px;
+}
+
+.birds-block .test-words__item:first-of-type .test-words__cell:last-of-type{
+    margin-bottom: 0;
+}
+
+.birds-block .test-words__item:nth-of-type(2) .test-words__cell{
+    margin-bottom: 10px;
+}
+
+/*.birds-block .test-words__cell {*/
+    /*margin-bottom: 10px;*/
+/*}*/
