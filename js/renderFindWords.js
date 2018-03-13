@@ -32,38 +32,21 @@ function renderFindWords($container) {
         "                           </div>\n" +
         "                        </div>\n" +
         "\n" +
-        "                        <div class=\"test-choise-block flex-test flex-test-just-even\">\n" +
-        "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise__red\">\n" +
-        "                              </div>\n" +
-        "                           </div>\n" +
-        "\n" +
-        "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise__purple\">\n" +
-        "                              </div>\n" +
-        "                           </div>\n" +
-        "\n" +
-        "                           <div class=\"test-word__item-block\">\n" +
-        "                           <div class=\"test-choise test-choise__dark-blue\">\n" +
-        "                           </div>\n" +
-        "                        </div>\n" +
-        "\n" +
-        "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise__cancel\">\n" +
-        "                              </div>\n" +
-        "                           </div>\n" +
-        "\n" +
-        "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise__white-blue\">\n" +
-        "                              </div>\n" +
-        "                           </div>\n" +
-        "\n" +
-        "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise__green\">\n" +
-        "                              </div>\n" +
-        "                           </div>\n" +
+        "                        <div id='color-choose-wrapper' class=\"test-choise-block flex-test flex-test-just-even\">\n" +
         "                        </div>\n" +
         "\n" +
         "                     </div>";
     $container.html(html);
+
+    var colors = ['#e9a503', '#e93e03', '#6147e5', '#32d7c0', '#b1f1fa'];
+
+    for (var i in colors) {
+        $('#color-choose-wrapper').append(
+            '<div class="test-word__item-block">' +
+            '   <div class="test-choise" data-color="' + colors[i] + '" style="border-color:' + colors[i] + '"></div>' +
+            '</div>'
+        );
+    }
+
+    testChoiceHandler();
 }

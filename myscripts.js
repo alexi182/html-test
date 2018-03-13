@@ -21,6 +21,21 @@ function createRightMenu(){
     });
 }
 
+function testChoiceHandler() {
+    $('.test-choise').on('click', function() {
+        var $this = $(this);
+
+        $('.test-choise').removeClass('active').css('background-color', 'transparent');
+        $this.addClass('active').css('background-color', $this.data('color'));
+    });
+}
+
+function getActiveTestChoiceColor() {
+    var $activeTestChoice = $('.test-choise.active');
+
+    return $activeTestChoice.length ? $activeTestChoice.data('color') : null;
+}
+
 function createTest(num){
     var html ="";
     switch(num){
