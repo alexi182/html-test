@@ -20,7 +20,6 @@ function createRightMenu(){
         });
         $(this).addClass("selected-li");
     });
-
 }
 
 function createTest(num){
@@ -323,44 +322,52 @@ function createTest(num){
                 "                        <div class=\"test-words flex-test flex-test-space-between flex-wrap\">\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple1.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">" +
+                "                                 <span class='apple-number-black'>3+0</span>" +
                 "                              </div>\n" +
                 "                           </div>\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple2.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+                "                                 <span class='apple-number-black'>4-1</span>" +
                 "                              </div>\n" +
                 "                           </div>\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple3.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+                "                                 <span class='apple-number-black'>2+1</span>" +
                 "                              </div>\n" +
                 "                           </div>\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple4.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+                "                                 <span class='apple-number-black'>1+2</span>" +
                 "                              </div>\n" +
                 "                           </div>\n" +
                 "\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple5.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+                "                                 <span class='apple-number-black'>3+1</span>" +
                 "                              </div>\n" +
                 "\n" +
                 "                           </div>\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple6.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+                "                                 <span class='apple-number-black'>5-1</span>" +
                 "                              </div>\n" +
                 "                           </div>\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple7.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+                "                                 <span class='apple-number-black'>1+1</span>" +
                 "                              </div>\n" +
                 "                           </div>\n" +
                 "                           <div class=\"test-words__item\">\n" +
                 "                              <div class=\"test-words__content test-border\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/apple8.png\" alt=\"\">\n" +
+                "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+                "                                 <span class='apple-number-black'>1+3</span>" +
                 "                              </div>\n" +
                 "                           </div>\n" +
                 "                        </div>\n" +
