@@ -402,65 +402,7 @@ function createTest(num){
             $("#testContainer").html(html);
             break;
         case 6:
-            html+="<a class=\"task-help _help\" href=\"#\">\n" +
-                "                        <i class=\"icon icon_nav-question\"></i>\n" +
-                "                     </a>\n" +
-                "                     <a class=\"task-play _play\" href=\"#\">\n" +
-                "                        <svg class=\"lesson-nav-item__icon i_step-8\">\n" +
-                "                           <use xlink:href=\"#icon-step-8\"></use>\n" +
-                "                        </svg>\n" +
-                "                     </a>\n" +
-                "\n" +
-                "                     <div class=\"test__task-block test__task_active\">\n" +
-                "                        <div class=\"test__title\" data-intro=\"Внимательно ознакомьтесь с текстом задания\">\n" +
-                "                           <p>Игра “Найди слова”\n" +
-                "                           </p>\n" +
-                "                           <p class=\"test__title-small\">\n" +
-                "                              Найдите 5 слов, обозначающие животных и выделите  разными цветами</p>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                        <div class=\"test-words\">\n" +
-                "                           <div class=\"test-words__item\">\n" +
-                "                              <div class=\"test-words__content tac\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/find-words.png\" alt=\"\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                        <div class=\"test-choise-block flex-test flex-test-just-even\">\n" +
-                "                           <div class=\"test-word__item-block\">\n" +
-                "                              <div class=\"test-choise test-choise__red\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "\n" +
-                "                           <div class=\"test-word__item-block\">\n" +
-                "                              <div class=\"test-choise test-choise__purple\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "\n" +
-                "                           <div class=\"test-word__item-block\">\n" +
-                "                           <div class=\"test-choise test-choise__dark-blue\">\n" +
-                "                           </div>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                           <div class=\"test-word__item-block\">\n" +
-                "                              <div class=\"test-choise test-choise__cancel\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "\n" +
-                "                           <div class=\"test-word__item-block\">\n" +
-                "                              <div class=\"test-choise test-choise__white-blue\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "\n" +
-                "                           <div class=\"test-word__item-block\">\n" +
-                "                              <div class=\"test-choise test-choise__green\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                     </div>";
-            $("#testContainer").html(html);
+            renderFindWords($("#testContainer"));
             break;
         case 7:
             html+="<a class=\"task-help _help\" href=\"#\">\n" +

@@ -415,3 +415,15 @@
 /*.birds-block .test-words__cell {*/
     /*margin-bottom: 10px;*/
 /*}*/
+
+.test-words__table-find-words {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.test-words__table-find-words tr td {
+    width: 57px;
+    height: 57px;
+    border: 1px solid #818181;
+    font-size: 30px;
+}
