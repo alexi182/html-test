@@ -19,7 +19,7 @@ function renderFindWords($container) {
         "                        <div class=\"test-words\">\n" +
         "                           <div class=\"test-words__item\">\n" +
         "                              <div class=\"test-words__content tac\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/find-words.png\" alt=\"\">" +
+        "                              <div class='selectable-table-wrapper'>" +
         "                                 <table class='test-words__table-find-words'>" +
         "                                    <tr><td>o</td><td>f</td><td>a</td><td>t</td><td>h</td><td>e</td><td>r</td><td>z</td></tr>" +
         "                                    <tr><td>s</td><td>i</td><td>u</td><td>t</td><td>e</td><td>r</td><td>x</td><td>t</td></tr>" +
@@ -28,6 +28,7 @@ function renderFindWords($container) {
         "                                    <tr><td>c</td><td>x</td><td>f</td><td>r</td><td>i</td><td>e</td><td>n</td><td>d</td></tr>" +
         "                                    <tr><td>w</td><td>m</td><td>o</td><td>t</td><td>h</td><td>e</td><td>r</td><td>q</td></tr>" +
         "                                 </table>" +
+        "                              </div>\n" +
         "                              </div>\n" +
         "                           </div>\n" +
         "                        </div>\n" +
@@ -39,12 +40,13 @@ function renderFindWords($container) {
     $container.html(html);
 
     var colors = ['#e9a503', '#e93e03', '#6147e5', '#32d7c0', '#b1f1fa'];
-    generateColoChoices(colors, $('#color-choose-wrapper'));
+    generateColorChoices(colors, $('#color-choose-wrapper'));
 
     var allotments = [];
     for (var i in colors) {
         var color = colors[i];
         allotments.push({
+            id: i,
             color: color,
             isExist: false,
             direction: null,
@@ -67,18 +69,113 @@ function renderFindWords($container) {
         }
     }
 
-    $('.test-words__table-find-words td').on('click', function () {
+    $('.test-words__table-find-words td').on('mousedown', function () {
+        var $element = $(this);
         var color = getActiveTestChoiceColor();
 
         if (!color) {
             return;
         }
 
+        var allotment = null;
 
+        for (var i in allotments) {
+            if (allotments[i].color === color) {
+                allotment = allotments[i];
+                break;
+            }
+        }
+
+        if (!allotment) {
+            return;
+        }
+
+        var $table = $('.test-words__table-find-words');
+
+        if (!$table.hasClass('inAction')) {
+            $table.addClass('inAction');
+            allotment.isExist = true;
+            allotment.startX = $element.data('x');
+            allotment.startY = $element.data('y');
+            allotment.endX = null;
+            allotment.endY = null;
+
+            renderAllotment(allotment);
+        }
+    }).on('mouseup', function () {
+        var $element = $(this);
+        var color = getActiveTestChoiceColor();
+
+        if (!color) {
+            return;
+        }
+
+        var allotment = null;
+
+        for (var i in allotments) {
+            if (allotments[i].color === color) {
+                allotment = allotments[i];
+                break;
+            }
+        }
+
+        if (!allotment) {
+            return;
+        }
+
+        var $table = $('.test-words__table-find-words');
+
+        if ($table.hasClass('inAction')) {
+            allotment.endX = $element.data('x');
+            allotment.endY = $element.data('y');
+
+            if (!canBuildAllotment(allotment)) {
+                allotment.endX = null;
+                allotment.endY = null
+            }
+
+            renderAllotment(allotment);
+
+            $table.removeClass('inAction');
+        }
+    }).on('mouseover', function(){
+        var $element = $(this);
+        var color = getActiveTestChoiceColor();
+
+        if (!color) {
+            return;
+        }
+
+        var allotment = null;
+
+        for (var i in allotments) {
+            if (allotments[i].color === color) {
+                allotment = allotments[i];
+                break;
+            }
+        }
+
+        if (!allotment) {
+            return;
+        }
+
+        var $table = $('.test-words__table-find-words');
+
+        if ($table.hasClass('inAction')) {
+            allotment.endX = $element.data('x');
+            allotment.endY = $element.data('y');
+
+            if (!canBuildAllotment(allotment)) {
+                allotment.endX = null;
+                allotment.endY = null
+            }
+
+            renderAllotment(allotment);
+        }
     });
 }
 
-function generateColoChoices(colors, $container) {
+function generateColorChoices(colors, $container) {
     for (var i in colors) {
         $container.append(
             '<div class="test-word__item-block">' +
@@ -87,5 +184,48 @@ function generateColoChoices(colors, $container) {
         );
     }
 
-    testChoiceHandler();
+    testChoiceHandler(function () {
+        $('.test-words__table-find-words').removeClass('inAction');
+    });
+}
+
+function renderAllotment(allotment) {
+    var leftMargin = parseInt($('.test-words__table-find-words').css('margin-left'));
+    var height = 0, width = 0, left = 0, top = 0, boxConst = 57, allotmentId = 'allotment-' + allotment.id, startX, startY;
+
+    $('#' + allotmentId).remove();
+
+    if (allotment.endX === null || allotment.endY === null) {
+        startX = allotment.startX;
+        startY = allotment.startY;
+        width = 40;
+        height = 40;
+    } else {
+        startX = (allotment.startX < allotment.endX) ? allotment.startX : allotment.endX;
+        startY = (allotment.startY < allotment.endY) ? allotment.startY : allotment.endY;
+
+        if (allotment.startX === allotment.endX) {
+            width = (Math.abs(allotment.startY - allotment.endY) + 1) * 57 - 17;
+            height = 40;
+        }
+
+        if (allotment.startY === allotment.endY) {
+            height = (Math.abs(allotment.startX - allotment.endX) + 1) * 57 - 17;
+            width = 40;
+        }
+    }
+
+    top = 9 + startX * boxConst;
+    left = 9 + leftMargin + startY * boxConst;
+
+    var html = '' +
+        '<div ' +
+        '   id="' + allotmentId + '" ' +
+        '   style="width: '+ width + 'px; height: ' + height + 'px; top: ' + top + 'px; left: ' + left +'px; position: absolute;border-radius: 15px; border: 2px dashed ' + allotment.color + '">' +
+        '</div>';
+    $('.test-words__table-find-words').parent().append(html);
+}
+
+function canBuildAllotment(allotment) {
+    return allotment.startX === allotment.endX || allotment.startY === allotment.endY;
 }
