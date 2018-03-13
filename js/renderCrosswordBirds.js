@@ -118,5 +118,42 @@ function renderCrosswordBirds($container){
             });
         }
     });
+
+    var divHeight = document.getElementsByClassName('tac')[0].offsetHeight;
+    var tableHeight = document.getElementById('birdCrosswordTable').offsetHeight;
+
+    var tableY = getOffsetSum(document.getElementById('birdCrosswordTable'));
+    var divY = getOffsetSum(document.getElementsByClassName('tac')[0]);
+
+
+
+    window.onscroll = function() {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var marginTopTable = tableY-scrolled;
+        var bool = divHeight + divY < tableHeight + scrolled + 10;
+
+        console.log(divHeight, divY, divHeight+divY);
+        console.log(tableHeight+tableY+scrolled);
+        console.log(bool);
+
+        if (marginTopTable > 0) {
+            document.getElementById('birdCrosswordTable').style.marginTop = "0px";
+        } else {
+            if (!bool) {
+                document.getElementById('birdCrosswordTable').style.marginTop = Math.abs(marginTopTable)+10+"px";
+            }
+        }
+    }
 }
+
+function getOffsetSum(elem) {
+    var top=0;
+    while(elem) {
+        top = top + parseFloat(elem.offsetTop);
+        elem = elem.offsetParent;
+    }
+
+    return Math.round(top);
+}
+
 
