@@ -1,7 +1,6 @@
 $( document ).ready(function() {
     createRightMenu();
-
-
+    createTest(1);
 });
 
 function createRightMenu(){
