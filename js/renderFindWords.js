@@ -61,12 +61,9 @@ function renderFindWords($container) {
     for (var i = 0; i < $tableRows.length; i++) {
         var $tableRow = $($tableRows[i]);
         var $rowColumns = $tableRow.find('td');
-        console.log($rowColumns);
 
         for (var j = 0; j < $rowColumns.length; j++) {
-            var $element = $($rowColumns[j]);
-            $element.attr('data-x', i);
-            $element.attr('data-y', j);
+            $($rowColumns[j]).attr('data-x', i).attr('data-y', j);
         }
     }
 

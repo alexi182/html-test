@@ -29,7 +29,10 @@ function testChoiceHandler(callback) {
         $this.addClass('active').css('background-color', $this.data('color'));
     });
 
-    callback();
+    if (callback && {}.toString.call(callback) === '[object Function]') {
+        callback();
+    }
+
 }
 
 function getActiveTestChoiceColor() {
