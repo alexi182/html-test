@@ -21,13 +21,15 @@ function createRightMenu(){
     });
 }
 
-function testChoiceHandler() {
+function testChoiceHandler(callback) {
     $('.test-choise').on('click', function() {
         var $this = $(this);
 
         $('.test-choise').removeClass('active').css('background-color', 'transparent');
         $this.addClass('active').css('background-color', $this.data('color'));
     });
+
+    callback();
 }
 
 function getActiveTestChoiceColor() {

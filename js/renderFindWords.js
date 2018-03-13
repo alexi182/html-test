@@ -39,9 +39,51 @@ function renderFindWords($container) {
     $container.html(html);
 
     var colors = ['#e9a503', '#e93e03', '#6147e5', '#32d7c0', '#b1f1fa'];
+    generateColoChoices(colors, $('#color-choose-wrapper'));
 
+    var allotments = [];
     for (var i in colors) {
-        $('#color-choose-wrapper').append(
+        var color = colors[i];
+        allotments.push({
+            color: color,
+            isExist: false,
+            direction: null,
+            startX: null,
+            startY: null,
+            endX: null,
+            endY: null
+        });
+    }
+
+    var $table = $('.test-words__table-find-words');
+    var $tableRows = $table.find('tr');
+
+    for (var i = 0; i < $tableRows.length; i++) {
+        var $tableRow = $($tableRows[i]);
+        var $rowColumns = $tableRow.find('td');
+        console.log($rowColumns);
+
+        for (var j = 0; j < $rowColumns.length; j++) {
+            var $element = $($rowColumns[j]);
+            $element.attr('data-x', i);
+            $element.attr('data-y', j);
+        }
+    }
+
+    $('.test-words__table-find-words td').on('click', function () {
+        var color = getActiveTestChoiceColor();
+
+        if (!color) {
+            return;
+        }
+
+
+    });
+}
+
+function generateColoChoices(colors, $container) {
+    for (var i in colors) {
+        $container.append(
             '<div class="test-word__item-block">' +
             '   <div class="test-choise" data-color="' + colors[i] + '" style="border-color:' + colors[i] + '"></div>' +
             '</div>'
