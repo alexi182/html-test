@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 function createRightMenu(){
     var html="";
-    for(var i=1;i<17;i++){
+    for(var i=1;i<18;i++){
         html += "<li class=\"js-task-num\" onclick='createTest("+i+")'>" +
             "    <a href=\"#\">" +
             "    <b>"+i+"</b>" +
@@ -927,6 +927,10 @@ function createTest(num){
                 }
             });
 
+            break;
+
+        case 17:
+            renderSelectAPicture($("#testContainer"));
             break;
     }
 }
