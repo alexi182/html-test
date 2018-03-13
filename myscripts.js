@@ -27,12 +27,11 @@ function testChoiceHandler(callback) {
 
         $('.test-choise').removeClass('active').css('background-color', 'transparent');
         $this.addClass('active').css('background-color', $this.data('color'));
+
+        if (callback && {}.toString.call(callback) === '[object Function]') {
+            callback();
+        }
     });
-
-    if (callback && {}.toString.call(callback) === '[object Function]') {
-        callback();
-    }
-
 }
 
 function getActiveTestChoiceColor() {
