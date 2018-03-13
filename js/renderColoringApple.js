@@ -19,52 +19,52 @@ function renderColoringApple($container){
         "\n" +
         "                        <div class=\"test-words flex-test flex-test-space-between flex-wrap\">\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">" +
+        "                              <div class=\"test-words__content apple_div\">\n" +
+        "                                 <img class=\"test-words__img test-border apple-img\" src=\"img/apple.png\" alt=\"\">" +
         "                                 <span class='apple-number-black'>3+0</span>" +
         "                              </div>\n" +
         "                           </div>\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+        "                              <div class=\"test-words__content apple_div\">\n" +
+        "                                 <img class=\"test-words__img test-border apple-img\" src=\"img/apple.png\" alt=\"\">\n" +
         "                                 <span class='apple-number-black'>4-1</span>" +
         "                              </div>\n" +
         "                           </div>\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+        "                              <div class=\"test-words__content apple_div\">\n" +
+        "                                 <img class=\"test-words__img test-border apple-img\" src=\"img/apple.png\" alt=\"\">\n" +
         "                                 <span class='apple-number-black'>2+1</span>" +
         "                              </div>\n" +
         "                           </div>\n" +
         "                           <div class=\"test-words__item\">\n" +
         "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+        "                                 <img class=\"test-words__img test-border apple-img\" src=\"img/apple.png\" alt=\"\">\n" +
         "                                 <span class='apple-number-black'>1+2</span>" +
         "                              </div>\n" +
         "                           </div>\n" +
         "\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+        "                              <div class=\"test-words__content apple_div\">\n" +
+        "                                 <img class=\"test-words__img test-border apple-img\" src=\"img/apple.png\" alt=\"\">\n" +
         "                                 <span class='apple-number-black'>3+1</span>" +
         "                              </div>\n" +
         "\n" +
         "                           </div>\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+        "                              <div class=\"test-words__content apple_div\">\n" +
+        "                                 <img class=\"test-words__img test-border\" src=\"img/apple.png\" alt=\"\">\n" +
         "                                 <span class='apple-number-black'>5-1</span>" +
         "                              </div>\n" +
         "                           </div>\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+        "                              <div class=\"test-words__content apple_div\">\n" +
+        "                                 <img class=\"test-words__img test-border\" src=\"img/apple.png\" alt=\"\">\n" +
         "                                 <span class='apple-number-black'>1+1</span>" +
         "                              </div>\n" +
         "                           </div>\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div class=\"test-words__content test-border apple_div\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/apple.png\" alt=\"\">\n" +
+        "                              <div class=\"test-words__content apple_div\">\n" +
+        "                                 <img class=\"test-words__img test-border\" src=\"img/apple.png\" alt=\"\">\n" +
         "                                 <span class='apple-number-black'>1+3</span>" +
         "                              </div>\n" +
         "                           </div>\n" +
@@ -72,19 +72,19 @@ function renderColoringApple($container){
         "\n" +
         "                        <div class=\"test-choise-block flex-test flex-test-just-even\">\n" +
         "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise-color test-choise__red\">\n" +
+        "                              <div data-color='#e9a503' class=\"test-choise test-choise-color test-choise__red\">\n" +
         "                              </div>\n" +
         "                              <span>2</span>\n" +
         "                           </div>\n" +
         "\n" +
         "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise-color test-choise__purple\">\n" +
+        "                              <div data-color='#e93e03' class=\"test-choise test-choise-color test-choise__purple\">\n" +
         "                              </div>\n" +
         "                              <span>3</span>\n" +
         "                           </div>\n" +
         "\n" +
         "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div class=\"test-choise test-choise-color test-choise__dark-blue\">\n" +
+        "                              <div data-color='#6147e5' class=\"test-choise test-choise-color test-choise__dark-blue\">\n" +
         "                              </div>\n" +
         "                              <span>4</span>\n" +
         "                           </div>\n" +
@@ -93,4 +93,14 @@ function renderColoringApple($container){
         "\n" +
         "                     </div>";
     $container.html(html);
+
+    testChoiceHandler();
+
+    $(".apple_div").on("click",function(){
+        var color = getActiveTestChoiceColor();
+        if(color!=null){
+            $(this).css("background-color",color);
+            $(this).find( "span" ).css( "color", "#fff" );
+        }
+    });
 }
