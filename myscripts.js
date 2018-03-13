@@ -453,33 +453,7 @@ function createTest(num){
             $("#testContainer").html(html);
             break;
         case 10:
-            html+="<a class=\"task-help _help\" href=\"#\">\n" +
-                "                        <i class=\"icon icon_nav-question\"></i>\n" +
-                "                     </a>\n" +
-                "                     <a class=\"task-play _play\" href=\"#\">\n" +
-                "                        <svg class=\"lesson-nav-item__icon i_step-8\">\n" +
-                "                           <use xlink:href=\"#icon-step-8\"></use>\n" +
-                "                        </svg>\n" +
-                "                     </a>\n" +
-                "\n" +
-                "                     <div class=\"test__task-block test__task_active\">\n" +
-                "                        <div class=\"test__title\" data-intro=\"Внимательно ознакомьтесь с текстом задания\">\n" +
-                "                           <p>Ребус\n" +
-                "                           </p>\n" +
-                "                           <p class=\"test__title-small\">\n" +
-                "                              Образуйте пары: круг - квадрат</p>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                        <div class=\"test-words\">\n" +
-                "                           <div class=\"test-words__item\">\n" +
-                "                              <div class=\"test-words__content tac\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/rebus-big3.png\" alt=\"\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                     </div>";
-            $("#testContainer").html(html);
+            renderRebusRoundAndSquare($("#testContainer"));
             break;
         case 11:
             html+="<a class=\"task-help _help\" href=\"#\">\n" +

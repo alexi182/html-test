@@ -505,40 +505,65 @@
 .figure1 {
     top: 0;
     left: 0;
+    background-image: url('img/fig1.png');
+    width: 111px;
+    height: 111px;
 }
 
 .figure2 {
     top: 25%;
     left: 20%;
+    background-image: url('img/fig2.png');
+    width: 111px;
+    height: 112px;
 }
 
 .figure3 {
     top: 75%;
     left: 15%;
+    background-image: url('img/fig3.png');
+    width: 88px;
+    height: 88px;
 }
 
 .figure4 {
     top: 50%;
     left: 40%;
+    background-image: url('img/fig4.png');
+    width: 93px;
+    height: 93px;
 }
 
 .figure5 {
     top: 7%;
     left: 52%;
+    background-image: url('img/fig5.png');
+    width: 69px;
+    height: 69px;
 }
 
 .figure6 {
     top: 77%;
     right: 26%;
+    background-image: url('img/fig6.png');
+    width: 123px;
+    height: 123px;
 }
+
 .figure7 {
     top: 44%;
     right: 18%;
+    background-image: url('img/fig7.png');
+    width: 64px;
+    height: 64px;
 }
 
 .figure8 {
     top: 10%;
-    right: 0%;
+    right: 0;
+    background-image: url('img/fig3.png');
+    width: 88px;
+    height: 88px;
 }
 
 .selectable-table-wrapper {
