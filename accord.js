@@ -1,5 +1,9 @@
 $('.js-openbar').on('click', function() {
 
+    openBar();
+});
+
+function openBar(){
     var accordion__content = $(this).next('.test-words__block-content-item');
     var accordion__block = $(this).parent('.test-words__block-content');
 
@@ -11,4 +15,6 @@ $('.js-openbar').on('click', function() {
         accordion__content.slideDown();
         accordion__block.addClass('content-active').siblings('.content-active').removeClass('content-active').find('.test-words__block-content-item').slideUp();
     }
-});
+}
+
+

@@ -1,3 +1,16 @@
+.selected-li a{
+    background-color: #fff !important;
+    color:#000 !important;
+}
+
+.test-words__item{
+    display: block !important;
+}
+
+.apple-number-black{
+    position: absolute;
+}
+
 .test__title-small {
     font-size: 24px;
     font-weight: 300;
@@ -421,3 +434,15 @@
 /*.birds-block .test-words__cell {*/
     /*margin-bottom: 10px;*/
 /*}*/
+
+.test-words__table-find-words {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.test-words__table-find-words tr td {
+    width: 57px;
+    height: 57px;
+    border: 1px solid #818181;
+    font-size: 30px;
+}
