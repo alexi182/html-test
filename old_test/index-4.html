@@ -134,33 +134,46 @@
                                     <div class="test__task-block">
 
                                         <div class="test__title" style="min-height: 80px; width: 90%;" data-intro="Внимательно ознакомьтесь с текстом задания">
-                                            Установите правильную хронологию правления (слева направо).
+                                            <p>Распределение изображений по категориям</p>
                                         </div>
 
                                         <div class="test-words">
-                                            <div class="interaction-item horizontal-items-container" data-intro="Выберете правильную, на Ваш взгляд, очередность слов в предложении, перетащив элементы вправо или влево" data-interaction-identifier="RESPONSE2" data-interaction-type="order">
-                <span class="interaction-choice sort__item" data-interaction-choice-identifier="LeaderD">
-                <p>Ленин</p>
-            </span>
-                                                <span class="interaction-choice sort__item" data-interaction-choice-identifier="LeaderF">
-                <p>Хрущёв</p>
-            </span>
-                                                <span class="interaction-choice sort__item" data-interaction-choice-identifier="LeaderE">
-                <p>Сталин</p>
-            </span>
-                                                <div style="clear: both;"></div>
-                                            </div>
-                                            <div class="interaction-item horizontal-items-container" data-intro="Выберете правильную, на Ваш взгляд, очередность слов в предложении, перетащив элементы вправо или влево" data-interaction-identifier="RESPONSE1" data-interaction-type="order">
-                <span class="interaction-choice sort__item" data-interaction-choice-identifier="LeaderB">
-                <p>Иван VI Грозный</p>
-            </span>
-                                                <span class="interaction-choice sort__item" data-interaction-choice-identifier="LeaderA">
-                <p>Василий III</p>
-            </span>
-                                                <span class="interaction-choice sort__item" data-interaction-choice-identifier="LeaderC">
-                <p>Иван III</p>
-            </span>
-                                                <div style="clear: both;"></div>
+                                            <div class="interaction-item" data-intro="Поместите расположенные внизу элементы в правильные, на Ваш взгляд, столбцы таблицы" data-interaction-identifier="RESPONSE" data-interaction-type="gap_match_table">
+                                                <table class="table sort_box-border gap-match-table__table" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                    <thead>
+                                                    <tr>
+                                                        <th width="33.333333333333%"><h4 class="sort__box-title">Категория 1</h4></th>
+                                                        <th width="33.333333333333%"><h4 class="sort__box-title">Категория 2</h4></th>
+                                                        <th width="33.333333333333%"><h4 class="sort__box-title">Категория 3</h4></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td data-identifier="G1" class="js-interaction-choice-container" width="33.333333333333%"></td>
+                                                        <td data-identifier="G2" class="js-interaction-choice-container" width="33.333333333333%"></td>
+                                                        <td data-identifier="G3" class="js-interaction-choice-container" width="33.333333333333%"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="choices-set js-interaction-item-list">
+                                                    <div class="interaction-choice  sort__item" data-id="A">
+                                                        <p><img src="img/chinovnik.jpg" style="max-width:100px;"></p>
+                                                        <p>Чиновник</p>
+                                                    </div>
+                                                    <div class="interaction-choice  sort__item" data-id="B">
+                                                        <p><img src="img/imperator.jpg" style="max-width:100px;"></p>
+                                                        <p>Император</p>
+                                                    </div>
+                                                    <div class="interaction-choice  sort__item" data-id="C">
+                                                        <p><img src="img/krestianin.jpg" style="max-width:100px;"></p>
+                                                        <p>Крестьянин</p>
+                                                    </div>
+                                                    <div class="interaction-choice  sort__item" data-id="D">
+                                                        <p><img src="img/zrets.jpg" style="max-width:100px;"></p>
+                                                        <p>Жрец</p>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                         </div>
