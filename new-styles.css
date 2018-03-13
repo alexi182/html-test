@@ -1,3 +1,12 @@
+.selected-li a{
+    background-color: #fff !important;
+    color:#000 !important;
+}
+
+.test-words__item{
+    display: block !important;
+}
+
 .test__title-small {
     font-size: 24px;
     font-weight: 300;
