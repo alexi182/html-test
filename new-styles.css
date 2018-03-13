@@ -8,7 +8,23 @@
 }
 
 .apple-number-black{
+    color: #333333;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 700;
+
+    top: 50%;
+
+    margin: auto;
     position: absolute;
+    left: 0; right: 0;
+}
+
+.apple_div{
+    border:none !important;
+    padding: 0px !important;
+    text-align: center !important;
+    position: relative;
 }
 
 .test__title-small {
