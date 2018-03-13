@@ -92,7 +92,7 @@
 }
 
 .flex-test {
-    display: flex;
+    display: flex!important;
 }
 
 .flex-wrap {
@@ -446,3 +446,52 @@
     border: 1px solid #818181;
     font-size: 30px;
 }
+
+.test-words__figures {
+    position: relative;
+    height: 350px;
+}
+
+.figure {
+    position: absolute;
+}
+
+.figure1 {
+    top: 0;
+    left: 0;
+}
+
+.figure2 {
+    top: 25%;
+    left: 20%;
+}
+
+.figure3 {
+    top: 75%;
+    left: 15%;
+}
+
+.figure4 {
+    top: 50%;
+    left: 40%;
+}
+
+.figure5 {
+    top: 7%;
+    left: 52%;
+}
+
+.figure6 {
+    top: 77%;
+    right: 26%;
+}
+.figure7 {
+    top: 44%;
+    right: 18%;
+}
+
+.figure8 {
+    top: 10%;
+    right: 0%;
+}
+
