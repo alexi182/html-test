@@ -27,6 +27,34 @@
     position: relative;
 }
 
+
+#birdCrosswordTable{
+    border-spacing: none;
+}
+#birdCrosswordTable tr td span{
+    color:#000;
+    margin-right: 25px;
+    font-weight: bold;
+    border:none !important;
+}
+#birdCrosswordTable tr td{
+    color:#fff;
+    text-align: center;
+    border:1px solid black;
+    font-size: 200%;
+    width: 77px;
+    height: 77px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#birdCrosswordTable tr td:nth-child(1) {
+    border:none !important;
+}
+
+
 .test__title-small {
     font-size: 24px;
     font-weight: 300;
