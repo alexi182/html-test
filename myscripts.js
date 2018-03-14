@@ -1,6 +1,10 @@
 $( document ).ready(function() {
     createRightMenu();
     createTest(1);
+    $('.js-task-num').each(function(){
+        $(this).removeClass("selected-li");
+    });
+    $($('.js-task-num')[0]).addClass("selected-li");
 });
 
 function createRightMenu(){
@@ -184,13 +188,34 @@ function createTest(num){
             });
             $($('.js-task-num')[num]).addClass("selected-li");
         });
+
+        $('.js-go-to-next-test').css('display', 'block').on('click', function() {
+            createTest(num + 1);
+            $('.js-task-num').each(function(){
+                $(this).removeClass("selected-li");
+            });
+            $($('.js-task-num')[num]).addClass("selected-li");
+        });
     } else {
         $('.js-go-to-next-test-btn').css('display', 'none');
+        $('.js-go-to-next-test').css('display', 'none');
     }
 
     $('.js-clear').on('click', function() {
         createTest(num);
     });
+
+    if (num === 1) {
+        $('.js-go-to-prev-test').css('display', 'none');
+    } else {
+        $('.js-go-to-prev-test').css('display', 'block').on('click', function() {
+            createTest(num - 1);
+            $('.js-task-num').each(function(){
+                $(this).removeClass("selected-li");
+            });
+            $($('.js-task-num')[num - 2]).addClass("selected-li");
+        });
+    }
 }
 
 
