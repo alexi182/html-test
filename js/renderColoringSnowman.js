@@ -103,29 +103,29 @@ function createPicture(){
 
     var layer = new Konva.Layer();
 
-    var imageObj = new Image();
-    imageObj.onload = function() {
-        var yoda = new Konva.Image({
-            x: 0,
-            y: 0,
-            image: imageObj,
-            width: 650,
-            height: 487
-        });
-
-        yoda.on('click', function () {
-            var mousePos = stage.getPointerPosition();
-            var x = parseInt(mousePos.y);
-            var y = parseInt(mousePos.x);
-            writeMessage('y: ' + y + ', x: ' + x);
-        });
-
-        // add the shape to the layer
-        layer.add(yoda);
-        yoda.moveToBottom();
-        layer.draw();
-    };
-    imageObj.src = './img/snowmen.jpg';
+    // var imageObj = new Image();
+    // imageObj.onload = function() {
+    //     var yoda = new Konva.Image({
+    //         x: 0,
+    //         y: 0,
+    //         image: imageObj,
+    //         width: 650,
+    //         height: 487
+    //     });
+    //
+    //     yoda.on('click', function () {
+    //         var mousePos = stage.getPointerPosition();
+    //         var x = parseInt(mousePos.y);
+    //         var y = parseInt(mousePos.x);
+    //         writeMessage('y: ' + y + ', x: ' + x);
+    //     });
+    //
+    //     // add the shape to the layer
+    //     layer.add(yoda);
+    //     yoda.moveToBottom();
+    //     layer.draw();
+    // };
+    // imageObj.src = './img/snowmen.jpg';
 
     // for (var i = 0; i < 487; i = i + 10) {
     //     var line = new Konva.Line({
@@ -211,8 +211,8 @@ function createPicture(){
             120,163, 120,163,
             37, 107
             ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.4
@@ -225,8 +225,8 @@ function createPicture(){
             126,177
 
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.1
@@ -247,8 +247,8 @@ function createPicture(){
             237,84
 
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.5
@@ -263,8 +263,8 @@ function createPicture(){
             328,109,
             267,143
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.4
@@ -283,8 +283,8 @@ function createPicture(){
             300,150,
             240,174
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.4
@@ -301,8 +301,8 @@ function createPicture(){
             330,211,
             270,223
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.4
@@ -320,8 +320,8 @@ function createPicture(){
             330,165,
             335,166
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.4
@@ -333,8 +333,8 @@ function createPicture(){
             295,210,
             325,197
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : false,
         tension : 0.4
@@ -388,8 +388,8 @@ function createPicture(){
             255,262,
             225,244
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.4
@@ -410,8 +410,8 @@ function createPicture(){
             355,392,355,392,
 
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.4
@@ -422,7 +422,7 @@ function createPicture(){
         y: 260,
         radius: 37,
         fill: '#fff',
-        stroke: 'red',
+        stroke: '#000',
         strokeWidth: 2
     });
 
@@ -431,7 +431,7 @@ function createPicture(){
         y: 264,
         radius: 37,
         fill: '#fff',
-        stroke: 'red',
+        stroke: '#000',
         strokeWidth: 2
     });
 
@@ -442,8 +442,8 @@ function createPicture(){
             184,244,
             175,248
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.1
@@ -456,8 +456,8 @@ function createPicture(){
             286,435,
             276,440
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.1
@@ -473,8 +473,8 @@ function createPicture(){
             313,240,
             327,307
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.3
@@ -491,8 +491,8 @@ function createPicture(){
             208,309,
             286,300
         ],
-        fill: '#00D2FF',
-        stroke: 'red',
+        fill: '#fff',
+        stroke: '#000',
         strokeWidth: 2,
         closed : true,
         tension : 0.3
@@ -506,32 +506,101 @@ function createPicture(){
     var line6 = new Konva.Line({points: [142,158,135,54], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
     var line7 = new Konva.Line({points: [145,157,151,55], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
 
-    var line8 = new Konva.Line({points: [135,176,116,56], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
-    var line9 = new Konva.Line({points: [142,158,135,54], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
-    var line10 = new Konva.Line({points: [145,157,151,55], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
+    var line8 = new Konva.Line({points: [135,176,143,214], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
+    var line9 = new Konva.Line({points: [140,174,157,207], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
+    var line10 = new Konva.Line({points: [148,171,168,203], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
+    var line11 = new Konva.Line({points: [150,170,178,192], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
 
+    var line12 = new Konva.Line({points: [233,73,214,105,213,146], stroke: '#000', strokeWidth: 2, closed : false, tension : 0.4});
+    var line13 = new Konva.Line({points: [233,73,234,106,240,130], stroke: '#000', strokeWidth: 2, closed : false, tension : 0.4});
+    var line14 = new Konva.Line({points: [233,73,257,95,270,120], stroke: '#000', strokeWidth: 2, closed : false, tension : 0.4});
+    var line15 = new Konva.Line({points: [233,73,275,80,310,112], stroke: '#000', strokeWidth: 2, closed : false, tension : 0.4});
+
+    var horizontalLine = new Konva.Line({points: [31,316,82,308,165,340,400,305,630,323], stroke: '#000', strokeWidth: 2, closed : false, tension : 0.4});
+
+    var cloud = new Konva.Line({
+        points: [
+            404,88,404,88,404,88,
+            368,81,
+            378,65,
+            405,56,
+            430,63,430,63,430,63,
+            426,50,
+            453,40,
+            480,44,
+            490,55,490,55,490,55,
+            504,44,
+            535,44,
+            555,50,
+            550,66,550,66,550,66,
+            580,66,
+            607,77,
+            590,90,
+            576,94,576,94,576,94,
+            596,100,
+            605,115,
+            577,122,
+            553,116,553,116,553,116,
+            554,132,
+            536,140,
+            511,140,
+            495,128,495,128,495,128,
+            472,133,
+            432,132,
+            426,120,
+            433,112,433,112,433,112,
+            403,114,
+            375,100,
+            384,90
+        ],
+        fill: '#fff',
+        stroke: 'red',
+        strokeWidth: 2,
+        closed : true,
+        tension : 0.5
+    });
+    var tree = new Konva.Line({
+        points: [
+            514,191,
+            583,270,
+            546,270,
+            620,330,
+            566,326,
+            625,370,
+            431,366,
+            480,320,
+            425,315,
+            482,264,
+            432,256
+        ],
+        fill: '#fff',
+        stroke: '#000',
+        strokeWidth: 2,
+        closed : true
+    });
 
     layer.add(text);
-    // layer.add(bottomBody);
-    // layer.add(middleBody);
-    // layer.add(rightHand);
-    // layer.add(leftHand);
-    // layer.add(stickTop);
-    // layer.add(stickBottom);
-    // layer.add(face);
-    //  layer.add(leftEye);
-    //  layer.add(rightEye);
-    // layer.add(smile);
-    // layer.add(nose);
-    // layer.add(pompon);
-    // layer.add(capTop);
-    // layer.add(capBottom);
-    //  layer.add(broomTop);
-    //  layer.add(broomMiddle);
-    // layer.add(scarfTop);
-    // layer.add(scarfBottom);
-    // layer.add(leftPupil);
-    // layer.add(rightPupil);
+    layer.add(horizontalLine);
+    layer.add(bottomBody);
+    layer.add(middleBody);
+    layer.add(rightHand);
+    layer.add(leftHand);
+    layer.add(stickTop);
+    layer.add(stickBottom);
+    layer.add(face);
+     layer.add(leftEye);
+     layer.add(rightEye);
+    layer.add(smile);
+    layer.add(nose);
+    layer.add(pompon);
+    layer.add(capTop);
+    layer.add(capBottom);
+     layer.add(broomTop);
+     layer.add(broomMiddle);
+    layer.add(scarfTop);
+    layer.add(scarfBottom);
+    layer.add(leftPupil);
+    layer.add(rightPupil);
     layer.add(line1);
     layer.add(line2);
     layer.add(line3);
@@ -543,6 +612,14 @@ function createPicture(){
     layer.add(line8);
     layer.add(line9);
     layer.add(line10);
+    layer.add(line11);
+    layer.add(line12);
+    layer.add(line13);
+    layer.add(line14);
+    layer.add(line15);
+
+    layer.add(cloud);
+    layer.add(tree);
 
     stage.add(layer);
 }
