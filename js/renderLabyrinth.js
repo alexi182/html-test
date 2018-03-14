@@ -18,10 +18,9 @@ function renderLabyrinth($container) {
         "\n" +
         "                        <div class=\"test-words\">\n" +
         "                           <div class=\"test-words__item\">\n" +
-        "                              <div id='canvas-wrapper'></div>" +
-        "                              <div class=\"test-words__content tac\">\n" +
-        "                                 <img class=\"test-words__img\" src=\"img/labyrint.png\" alt=\"\">\n" +
-        "                              </div>\n" +
+        "<div style='float:left;width:200px;position:relative' align='right'><img style='margin-top: -40px;' src='img/monkey.png'></div>                              " +
+        "<div style='float:left;' id='canvas-wrapper'></div>" +
+        "<div style='float:left;position:relative'><img style='margin-top: 484px;margin-left: 10px;' src='img/banana.png'></div>" +
         "                           </div>\n" +
         "                        </div>\n" +
         "\n" +

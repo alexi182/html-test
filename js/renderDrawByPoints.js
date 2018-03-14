@@ -38,67 +38,67 @@ function renderDrawByPoints($container) {
         "                                                17 + 11 = <input class=\"test-words__input\" data-id='6' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                12 - 2 = <input class=\"test-words__input\" data-id='7' />\n" +
+        "                                                12 + 3 = <input class=\"test-words__input\" data-id='7' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 5 = <input class=\"test-words__input\" data-id='8' />\n" +
+        "                                                16 + 9 = <input class=\"test-words__input\" data-id='8' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                16 - 5 = <input class=\"test-words__input\" data-id='9' />\n" +
+        "                                                24 - 7 = <input class=\"test-words__input\" data-id='9' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 4= <input class=\"test-words__input\" data-id='10' />\n" +
+        "                                                15 + 4 - 9= <input class=\"test-words__input\" data-id='10' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 5 = <input class=\"test-words__input\" data-id='11' />\n" +
+        "                                                3 + 8 = <input class=\"test-words__input\" data-id='11' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                16 - 5 = <input class=\"test-words__input\" data-id='12' />\n" +
+        "                                                16 + 5 - 3 = <input class=\"test-words__input\" data-id='12' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 4= <input class=\"test-words__input\" data-id='13' />\n" +
+        "                                                15 + 7= <input class=\"test-words__input\" data-id='13' />\n" +
         "                                            </div>\n" +
         "                                        </div>\n" +
         "\n" +
         "                                        <div class=\"test-words__col tar right-col\">\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 5 = <input class=\"test-words__input\" data-id='26' />\n" +
+        "                                                15 - 9 - 5 = <input class=\"test-words__input\" data-id='26' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                16 - 5 = <input class=\"test-words__input\" data-id='25' />\n" +
+        "                                                16 + 5 + 5 = <input class=\"test-words__input\" data-id='25' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 4= <input class=\"test-words__input\" data-id='24' />\n" +
+        "                                                31 - 6 + 2 = <input class=\"test-words__input\" data-id='24' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                8 + 2 - 9 = <input class=\"test-words__input\" data-id='23' />\n" +
+        "                                                8 + 3 + 3 = <input class=\"test-words__input\" data-id='23' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                17 - 5 = <input class=\"test-words__input\" data-id='22' />\n" +
+        "                                                17 + 10 - 22 = <input class=\"test-words__input\" data-id='22' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                16 - 9 = <input class=\"test-words__input\" data-id='21' />\n" +
+        "                                                16 - 12 = <input class=\"test-words__input\" data-id='21' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 - 7 = <input class=\"test-words__input\" data-id='20' />\n" +
+        "                                                15 - 7 + 21 = <input class=\"test-words__input\" data-id='20' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                8 + 2 - 8 = <input class=\"test-words__input\" data-id='19' />\n" +
+        "                                                8 + 34 - 33 = <input class=\"test-words__input\" data-id='19' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                17 + 11 = <input class=\"test-words__input\" data-id='18' />\n" +
+        "                                                17 + 11 - 25 = <input class=\"test-words__input\" data-id='18' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                12 - 2 = <input class=\"test-words__input\" data-id='17' />\n" +
+        "                                                24 - 5 - 6 = <input class=\"test-words__input\" data-id='17' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 5 = <input class=\"test-words__input\" data-id='16' />\n" +
+        "                                                12 - 6 = <input class=\"test-words__input\" data-id='16' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                16 - 5 = <input class=\"test-words__input\" data-id='15' />\n" +
+        "                                                6 + 5 + 8 = <input class=\"test-words__input\" data-id='15' />\n" +
         "                                            </div>\n" +
         "                                            <div class=\"test-words__cell\">\n" +
-        "                                                15 + 4= <input class=\"test-words__input\" data-id='14' />\n" +
+        "                                                35 - 14 = <input class=\"test-words__input\" data-id='14' />\n" +
         "                                            </div>\n" +
         "                                        </div>\n" +
         "                                    </div>\n" +
@@ -172,6 +172,14 @@ function renderDrawByPoints($container) {
         layer.add(simpleText);
     }
 
+    var dx = 8;
+    var tx = 5;
+    layer.add(new Konva.Line({
+        points: [3*28 + dx, 2*28 , 3*28 + dx, 2*28  + tx, 3*28 + dx + tx, 2*28  + tx, 3*28 + dx + tx, 2*28 , 3*28 + dx, 2*28 ],
+        stroke: 'black',
+        strokeWidth: 2
+    }));
+
     stage.add(layer);
 
     $('.test-words__input').on('input', function () {
@@ -183,7 +191,7 @@ function drawLinesByInputs(layer) {
     var answers = [], thisPoint, prevInputPoint, prevAnswer = null;
 
     layer.find('Circle').setFill('black');
-    layer.find('Line').remove();
+    layer.find('.dynamic').remove();
 
     $('.test-words__input').each(function () {
         var $this = $(this);
@@ -205,6 +213,7 @@ function drawLinesByInputs(layer) {
             var line = new Konva.Line({
                 points: [thisPoint.getX(), thisPoint.getY(), prevInputPoint.getX(), prevInputPoint.getY()],
                 stroke: 'black',
+                name: 'dynamic',
                 strokeWidth: 3
             });
             layer.add(line);
