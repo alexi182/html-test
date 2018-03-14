@@ -72,19 +72,19 @@ function renderColoringApple($container){
         "\n" +
         "                        <div class=\"test-choise-block flex-test flex-test-just-even\">\n" +
         "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div data-color='#e9a503' class=\"test-choise test-choise-color test-choise__red\">\n" +
+        "                              <div data-color='red' class=\"test-choise test-choise-color test-choise__red\">\n" +
         "                              </div>\n" +
         "                              <span>2</span>\n" +
         "                           </div>\n" +
         "\n" +
         "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div data-color='#e93e03' class=\"test-choise test-choise-color test-choise__purple\">\n" +
+        "                              <div data-color='#662d91' class=\"test-choise test-choise-color test-choise__purple\">\n" +
         "                              </div>\n" +
         "                              <span>3</span>\n" +
         "                           </div>\n" +
         "\n" +
         "                           <div class=\"test-word__item-block\">\n" +
-        "                              <div data-color='#6147e5' class=\"test-choise test-choise-color test-choise__dark-blue\">\n" +
+        "                              <div data-color='darkblue' class=\"test-choise test-choise-color test-choise__dark-blue\">\n" +
         "                              </div>\n" +
         "                              <span>4</span>\n" +
         "                           </div>\n" +
