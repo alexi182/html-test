@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 function createRightMenu(){
     var html="";
-    for(var i=1;i<18;i++){
+    for(var i=1;i<16;i++){
         html += "<li class=\"js-task-num\" onclick='createTest("+i+")'>" +
             "    <a href=\"#\">" +
             "    <b>"+i+"</b>" +
@@ -42,7 +42,7 @@ function getActiveTestChoiceColor() {
 
 function createTest(num){
     var html ="";
-    switch(num){
+    switch (num) {
         case 1:
             renderRestoringTheSequenceVertical($("#testContainer"));
             break;
@@ -160,298 +160,37 @@ function createTest(num){
             renderRebusRoundAndSquare($("#testContainer"));
             break;
         case 11:
-            html+="<a class=\"task-help _help\" href=\"#\">\n" +
-                "                        <i class=\"icon icon_nav-question\"></i>\n" +
-                "                     </a>\n" +
-                "                     <a class=\"task-play _play\" href=\"#\">\n" +
-                "                        <svg class=\"lesson-nav-item__icon i_step-8\">\n" +
-                "                           <use xlink:href=\"#icon-step-8\"></use>\n" +
-                "                        </svg>\n" +
-                "                     </a>\n" +
-                "\n" +
-                "                     <div class=\"test__task-block test__task_active\">\n" +
-                "                        <div class=\"test__title\" data-intro=\"Внимательно ознакомьтесь с текстом задания\">\n" +
-                "                           <p>Соединение линий, прокладка маршрута\n" +
-                "                           </p>\n" +
-                "                           <p class=\"test__title-small\">\n" +
-                "                              Соедини начальные буквы слова с соответствующими картинками</p>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                        <div class=\"test-words\">\n" +
-                "                           <div class=\"test-words__item\">\n" +
-                "                              <div class=\"test-words__content tac\">\n" +
-                "                                 <img class=\"test-words__img\" src=\"img/line2.png\" alt=\"\">\n" +
-                "                              </div>\n" +
-                "                           </div>\n" +
-                "                        </div>\n" +
-                "\n" +
-                "                     </div>";
-            $("#testContainer").html(html);
+            rednderPuzzle($("#testContainer"));
             break;
         case 12:
-            html+="<a class=\"task-help _help\" href=\"#\">\n" +
-                "                                <i class=\"icon icon_nav-question\"></i>\n" +
-                "                            </a>\n" +
-                "                            <a class=\"task-play _play\" href=\"#\">\n" +
-                "                                <svg class=\"lesson-nav-item__icon i_step-8\">\n" +
-                "                                    <use xlink:href=\"#icon-step-8\"></use>\n" +
-                "                                </svg>\n" +
-                "                            </a>\n" +
-                "\n" +
-                "                            <div class=\"test__task-block test__task_active\">\n" +
-                "                                <div class=\"test__title\" data-intro=\"Внимательно ознакомьтесь с текстом задания\">\n" +
-                "                                    <p>Соединение линий, прокладка маршрута</p>\n" +
-                "                                    <p class=\"test__title-small\">\n" +
-                "                                        Построй разные отрезки с концами в данных точках так, чтобы на каждом рисунке  было 5 треугольников</p>\n" +
-                "                                </div>\n" +
-                "\n" +
-                "                                <div class=\"test-words flex-test flex-test-space-between\">\n" +
-                "\n" +
-                "                                    <div class=\"test-words__item\">\n" +
-                "                                        <img src=\"img/line3.png\" alt=\"\">\n" +
-                "                                    </div>\n" +
-                "\n" +
-                "                                    <div class=\"test-words__item\">\n" +
-                "                                        <img src=\"img/line4.png\" alt=\"\">\n" +
-                "                                    </div>\n" +
-                "\n" +
-                "                                </div>\n" +
-                "\n" +
-                "                            </div>";
-            $("#testContainer").html(html);
-            break;
-        case 13:
-            html+="<a class=\"task-help _help\" href=\"#\">\n" +
-                "                                <i class=\"icon icon_nav-question\"></i>\n" +
-                "                            </a>\n" +
-                "                            <a class=\"task-play _play\" href=\"#\">\n" +
-                "                                <svg class=\"lesson-nav-item__icon i_step-8\">\n" +
-                "                                    <use xlink:href=\"#icon-step-8\"></use>\n" +
-                "                                </svg>\n" +
-                "                            </a>\n" +
-                "\n" +
-                "                            <div class=\"test__task-block test__task_active\">\n" +
-                "                                <div class=\"test__title\" data-intro=\"Внимательно ознакомьтесь с текстом задания\">\n" +
-                "                                    <p>Мозайка</p>\n" +
-                "                                    <p class=\"test__title-small\">\n" +
-                "                                        Соберите изоображение из частей</p>\n" +
-                "                                </div>\n" +
-                "\n" +
-                "                                <div class=\"test-words flex-test flex-test-space-between flex-test-alcenter\">\n" +
-                "                                    <div class=\"test-words__item w60\">\n" +
-                "                                        <div class=\"puzzle-block\">\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-1.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-3.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-4.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-5.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-6.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-7.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-8.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"puzzle-block__item\">\n" +
-                "                                                <img src=\"img/puzzle-9.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "                                    </div>\n" +
-                "\n" +
-                "                                    <div class=\"test-words__item w40\">\n" +
-                "                                        <img src=\"img/puzzle-main.png\" alt=\"\">\n" +
-                "                                    </div>\n" +
-                "                                </div>\n" +
-                "\n" +
-                "                            </div>";
-            $("#testContainer").html(html);
-            break;
-        case 14:
             renderDrawByPoints($("#testContainer"));
             break;
-        case 15:
+        case 13:
             renderCrosswordBirds($("#testContainer"));
             break;
-        case 16:
-            html+="<a class=\"task-help _help\" href=\"#\">\n" +
-                "                                <i class=\"icon icon_nav-question\"></i>\n" +
-                "                            </a>\n" +
-                "\n" +
-                "                            <a class=\"task-play _play\" href=\"#\">\n" +
-                "                                <svg class=\"lesson-nav-item__icon i_step-8\">\n" +
-                "                                    <use xlink:href=\"#icon-step-8\"></use>\n" +
-                "                                </svg>\n" +
-                "                            </a>\n" +
-                "\n" +
-                "                            <div class=\"test__task-block test__task_active\">\n" +
-                "                                <div class=\"test__title\" data-intro=\"Внимательно ознакомьтесь с текстом задания\">\n" +
-                "                                    <p> Кроссворд  “Персонажи мультфильмов”</p>\n" +
-                "                                    <p class=\"test__title-small\">\n" +
-                "                                        Разгадайте кроссворд</p>\n" +
-                "                                </div>\n" +
-                "\n" +
-                "                                <div class=\"test-words flex-test flex-test-space-between\">\n" +
-                "                                    <div class=\"test-words__item\">\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                1. по вертикали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                2. по вертикали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                3. по вертикали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                4. по вертикали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                5. по горизонтали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                6. по вертикали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                7. по горизонтали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                8. по горизонтали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                        <div class=\"test-words__block-content\">\n" +
-                "                                            <div class=\"test-words__block-head js-openbar\">\n" +
-                "                                                9. по горизонтали <span></span>\n" +
-                "                                            </div>\n" +
-                "                                            <div class=\"test-words__block-content-item\">\n" +
-                "                                                <img src=\"img/crosswords2.png\" alt=\"\">\n" +
-                "                                            </div>\n" +
-                "                                        </div>\n" +
-                "\n" +
-                "                                    </div>\n" +
-                "\n" +
-                "                                    <div class=\"test-words__item w60 tar\">\n" +
-                "                                        <img src=\"img/crosswords.png\" alt=\"\">\n" +
-                "\n" +
-                "                                        <div class=\"test-words__letter-block\">\n" +
-                "                                            <span>А</span>\n" +
-                "                                            <span>Б</span>\n" +
-                "                                            <span>В</span>\n" +
-                "                                            <span>Г</span>\n" +
-                "                                            <span>Д</span>\n" +
-                "                                            <span>Е</span>\n" +
-                "                                            <span>Ё</span>\n" +
-                "                                            <span>Ж</span>\n" +
-                "                                            <span>З</span>\n" +
-                "                                            <span>И</span>\n" +
-                "                                            <span>Й</span>\n" +
-                "                                            <span>К</span>\n" +
-                "                                            <span>Л</span>\n" +
-                "                                            <span>М</span>\n" +
-                "                                            <span>Н</span>\n" +
-                "                                            <span>О</span>\n" +
-                "                                            <span>П</span>\n" +
-                "                                            <span>Р</span>\n" +
-                "                                            <span>С</span>\n" +
-                "                                            <span>Т</span>\n" +
-                "                                            <span>У</span>\n" +
-                "                                            <span>Ф</span>\n" +
-                "                                            <span>Х</span>\n" +
-                "                                            <span>Ц</span>\n" +
-                "                                            <span>Ч</span>\n" +
-                "                                            <span>Ш</span>\n" +
-                "                                            <span>Щ</span>\n" +
-                "                                            <span>Ъ</span>\n" +
-                "                                            <span>Ы</span>\n" +
-                "                                            <span>Ь</span>\n" +
-                "                                            <span>Э</span>\n" +
-                "                                            <span>Ю</span>\n" +
-                "                                            <span>Я</span>\n" +
-                "                                        </div>\n" +
-                "                                    </div>\n" +
-                "                                </div>\n" +
-                "\n" +
-                "                            </div>";
-            $("#testContainer").html(html);
-
-            $('.js-openbar').on('click', function() {
-
-                var accordion__content = $(this).next('.test-words__block-content-item');
-                var accordion__block = $(this).parent('.test-words__block-content');
-
-                if (accordion__block.hasClass('content-active')) {
-                    accordion__content.slideUp();
-                    accordion__block.removeClass('content-active');
-
-                } else {
-                    accordion__content.slideDown();
-                    accordion__block.addClass('content-active').siblings('.content-active').removeClass('content-active').find('.test-words__block-content-item').slideUp();
-                }
-            });
-
+        case 14:
+            renderCrossword($("#testContainer"));
             break;
-
-        case 17:
+        case 15:
             renderSelectAPicture($("#testContainer"));
             break;
     }
+
+    if (num < 15) {
+        $('.js-go-to-next-test-btn').css('display', 'inline-block').on('click', function () {
+            createTest(num + 1);
+            $('.js-task-num').each(function(){
+                $(this).removeClass("selected-li");
+            });
+            $($('.js-task-num')[num]).addClass("selected-li");
+        });
+    } else {
+        $('.js-go-to-next-test-btn').css('display', 'none');
+    }
+
+    $('.js-clear').on('click', function() {
+        createTest(num);
+    });
 }
 
 

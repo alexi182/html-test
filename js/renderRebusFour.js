@@ -90,8 +90,6 @@ function renderRebusFour($container){
 
     $container.html(html);
 
-
-    
     var containerArr = [
         document.getElementById('druggable-img1'),
         document.getElementById('druggable-img2'),
@@ -106,7 +104,6 @@ function renderRebusFour($container){
         document.getElementById('droppable-td6'),
         document.getElementById('droppable-td7')
     ];
-
 
     dragula(containerArr, {
         copy: true,

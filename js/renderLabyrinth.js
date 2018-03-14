@@ -120,7 +120,7 @@ function renderLabyrinth($container) {
             {top:false,right:false,bottom:true,left:true,point:true},
             {top:true,right:false,bottom:true,left:false,point:false},
             {top:true,right:false,bottom:false,left:false,point:true},
-            {top:false,right:false,bottom:true,left:false,point:false},
+            {top:false,right:false,bottom:true,left:false,point:true},
             {top:true,right:true,bottom:false,left:true,point:true},
             {top:false,right:false,bottom:true,left:true,point:true},
             {top:true,right:true,bottom:false,left:false,point:true},
