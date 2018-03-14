@@ -15,22 +15,31 @@ function renderRestoringTheSequenceHorizontal($container) {
         "                                    <p class=\"test__title-small\">\n" +
         "                                        Расставьте правильно картинки</p>\n" +
         "                                </div>\n" +
-        "\n" +
         "                                <div id='sortDiv' class=\"test-words flex-test flex-test-space-between\" style='width:100%'>\n" +
         "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
         "                                        <img src=\"img/tree.png\" alt=\"\">\n" +
-        "                                        <div class=\"test-words__num\">1</div>\n" +
         "                                    </div>\n" +
         "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
         "                                        <img src=\"img/tree2.png\" alt=\"\">\n" +
-        "                                        <div class=\"test-words__num\">2</div>\n" +
         "                                    </div>\n" +
         "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
         "                                        <img src=\"img/tree3.png\" alt=\"\">\n" +
-        "                                        <div class=\"test-words__num\">3</div>\n" +
         "                                    </div>\n" +
         "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
         "                                        <img src=\"img/tree4.png\" alt=\"\">\n" +
+        "                                    </div>\n" +
+        "                                </div>\n" +
+        "                                <div class=\"test-words flex-test flex-test-space-between\" style='width:100%'>\n" +
+        "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
+        "                                        <div class=\"test-words__num\">1</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
+        "                                        <div class=\"test-words__num\">2</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
+        "                                        <div class=\"test-words__num\">3</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"test-words__item ui-state-default\" style='width:25%;border:none;text-align: center;background-color: transparent !important;'>\n" +
         "                                        <div class=\"test-words__num\">4</div>\n" +
         "                                    </div>\n" +
         "                                </div>\n" +
