@@ -55,7 +55,7 @@ function renderColoringSnowman($container){
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>6 -</span>\n" +
-        "                                 <div data-color='lightpink' class=\"test-choise test-choise__pink\">\n" +
+        "                                 <div data-color='lightpink' class=\"test-choise test-choise__white-pink\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
@@ -125,59 +125,13 @@ function createPicture(){
     //     layer.draw();
     // };
     // imageObj.src = './img/snowmen.jpg';
-
-    // for (var i = 0; i < 487; i = i + 10) {
-    //     var line = new Konva.Line({
-    //         points: [0, i, 650, i],
-    //         stroke: '#cecece',
-    //         strokeWidth: 1
-    //     });
-    //     var simpleText = new Konva.Text({
-    //         x: 0,
-    //         y: i - 5,
-    //         text: i,
-    //         fontSize: 12,
-    //         fontFamily: 'Calibri',
-    //         fill: 'blue'
-    //     });
-    //     line.on('mouseover', function () {
-    //         $(this).setStroke('black');
-    //     });
-    //     layer.add(line);
-    //     layer.add(simpleText);
+    //
+    //
+    // function writeMessage(message) {
+    //     text.setText(message);
+    //     layer.draw();
     // }
     //
-    // for (var j = 0; j < 650; j = j + 10) {
-    //     var line = new Konva.Line({
-    //         points: [j, 0, j, 487],
-    //         stroke: '#cecece',
-    //         strokeWidth: 1
-    //     });
-    //     var simpleText = new Konva.Text({
-    //         x: j + 7,
-    //         y: 0,
-    //         text: j,
-    //         fontSize: 12,
-    //         fontFamily: 'Calibri',
-    //         fill: 'blue',
-    //         rotation: 90
-    //     });
-    //
-    //     line.on('mouseover', function () {
-    //         console.log(12);
-    //         this.stroke('black');
-    //         layer.draw();
-    //     });
-    //
-    //     layer.add(line);
-    //     layer.add(simpleText);
-    // }
-
-    function writeMessage(message) {
-        text.setText(message);
-        layer.draw();
-    }
-
     var text = new Konva.Text({
         x: 10,
         y: 10,
@@ -186,6 +140,7 @@ function createPicture(){
         text: '',
         fill: 'black'
     });
+
 
     var broomTop = new Konva.Line({
         points: [
@@ -648,6 +603,141 @@ function createPicture(){
 
     layer.add(cloud);
     layer.add(tree);
+
+    var text1 = new Konva.Text({
+        x: 80,
+        y: 91,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '9-8',
+        fill: 'black'
+    });
+    layer.add(text1);
+    var text2 = new Konva.Text({
+        x: 213,
+        y: 49,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '7-5',
+        fill: 'black'
+    });
+    layer.add(text2);
+    var text3 = new Konva.Text({
+        x: 227,
+        y: 90,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '1+1',
+        fill: 'black'
+    });
+    layer.add(text3);
+    var text4 = new Konva.Text({
+        x: 240,
+        y: 133,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '3-1',
+        fill: 'black'
+    });
+    layer.add(text4);
+    var text5 = new Konva.Text({
+        x: 303,
+        y: 166,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '1+2',
+        fill: 'black'
+    });
+    layer.add(text5);
+
+
+
+
+    var text6 = new Konva.Text({
+        x: 235,
+        y: 178,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '3+4',
+        fill: 'black'
+    });
+    layer.add(text6);
+    var text7 = new Konva.Text({
+        x: 167,
+        y: 261,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '1+6',
+        fill: 'black'
+    });
+    layer.add(text7);
+    var text8 = new Konva.Text({
+        x: 345,
+        y: 246,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '10-3',
+        fill: 'black'
+    });
+    layer.add(text8);
+    var text9 = new Konva.Text({
+        x: 228,
+        y: 287,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '7-0',
+        fill: 'black'
+    });
+    layer.add(text9);
+    var text10 = new Konva.Text({
+        x: 188,
+        y: 364,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '8-1',
+        fill: 'black'
+    });
+    layer.add(text10);
+
+    var text11 = new Konva.Text({
+        x: 460,
+        y: 86,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '12-5',
+        fill: 'black'
+    });
+    layer.add(text11);
+    var text12 = new Konva.Text({
+        x: 487,
+        y: 285,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '8+1',
+        fill: 'black'
+    });
+    layer.add(text12);
+
+    var text13 = new Konva.Text({
+        x: 255,
+        y: 229,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '5-1',
+        fill: 'black'
+    });
+    layer.add(text13);
+    var text14 = new Konva.Text({
+        x: 305,
+        y: 328,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '3+1',
+        fill: 'black'
+    });
+    layer.add(text14);
+
+
 
     testChoiceHandler();
 
