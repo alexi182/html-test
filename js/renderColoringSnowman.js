@@ -19,31 +19,31 @@ function renderColoringSnowman($container){
         "                           <div class=\"test-words__item\">\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>1 - </span>\n" +
-        "                                 <div class=\"test-choise test-choise__brown\">\n" +
+        "                                 <div data-color='brown' class=\"test-choise test-choise__brown\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>2 - </span>\n" +
-        "                                 <div class=\"test-choise test-choise__dark-blue\">\n" +
+        "                                 <div data-color='darkblue' class=\"test-choise test-choise__dark-blue\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>3 - </span>\n" +
-        "                                 <div class=\"test-choise test-choise__red\">\n" +
+        "                                 <div data-color='red' class=\"test-choise test-choise__red\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>4 - </span>\n" +
-        "                                 <div class=\"test-choise test-choise__dark-purple\">\n" +
+        "                                 <div data-color='purple' class=\"test-choise test-choise__dark-purple\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>5 - </span>\n" +
-        "                                 <div class=\"test-choise test-choise__white-green\">\n" +
+        "                                 <div data-color='lightgreen' class=\"test-choise test-choise__white-green\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "                           </div>\n" +
@@ -55,33 +55,28 @@ function renderColoringSnowman($container){
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>6 -</span>\n" +
-        "                                 <div class=\"test-choise test-choise__pink\">\n" +
+        "                                 <div data-color='lightpink' class=\"test-choise test-choise__pink\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>7 -</span>\n" +
-        "                                 <div class=\"test-choise test-choise__white-blue\">\n" +
+        "                                 <div data-color='lightblue' class=\"test-choise test-choise__white-blue\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>8 -</span>\n" +
-        "                                 <div class=\"test-choise test-choise__purple\">\n" +
+        "                                 <div data-color='#662d91' class=\"test-choise test-choise__purple\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
         "                              <div class=\"test-word__item-block flex-test\">\n" +
         "                                 <span>9 -</span>\n" +
-        "                                 <div class=\"test-choise test-choise__green\">\n" +
+        "                                 <div data-color='#186723' class=\"test-choise test-choise__green\">\n" +
         "                                 </div>\n" +
         "                              </div>\n" +
         "\n" +
-        "                              <div class=\"test-word__item-block flex-test\">\n" +
-        "                                 <div class=\"test-choise test-choise__cancel\">\n" +
-        "                                    <span>СБРОС</span>\n" +
-        "                                 </div>\n" +
-        "                              </div>\n" +
         "                           </div>\n" +
         "                        </div>\n" +
         "\n" +
@@ -104,6 +99,7 @@ function createPicture(){
     var layer = new Konva.Layer();
 
     // var imageObj = new Image();
+    // var arrRes = [];
     // imageObj.onload = function() {
     //     var yoda = new Konva.Image({
     //         x: 0,
@@ -117,7 +113,10 @@ function createPicture(){
     //         var mousePos = stage.getPointerPosition();
     //         var x = parseInt(mousePos.y);
     //         var y = parseInt(mousePos.x);
-    //         writeMessage('y: ' + y + ', x: ' + x);
+    //          arrRes.push(y);
+    //          arrRes.push(x);
+    //          console.log(arrRes.join());
+    //         writeMessage(y + ', ' +  x);
     //     });
     //
     //     // add the shape to the layer
@@ -215,7 +214,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.4
+        tension : 0.4,
+        name: 'activeElement'
     });
     var broomMiddle = new Konva.Line({
         points: [
@@ -229,7 +229,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.1
+        tension : 0.1,
+        name: 'activeElement'
     });
 
     var pompon = new Konva.Line({
@@ -251,7 +252,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.5
+        tension : 0.5,
+        name: 'activeElement'
     });
 
     var capTop = new Konva.Line({
@@ -267,7 +269,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.4
+        tension : 0.4,
+        name: 'activeElement'
     });
 
     var capBottom = new Konva.Line({
@@ -287,7 +290,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.4
+        tension : 0.4,
+        name: 'activeElement'
     });
 
     var face = new Konva.Line({
@@ -305,7 +309,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.4
+        tension : 0.4,
+        name: 'activeElement'
     });
 
     var nose = new Konva.Line({
@@ -324,7 +329,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.4
+        tension : 0.4,
+        name: 'activeElement'
     });
 
     var smile = new Konva.Line({
@@ -339,7 +345,6 @@ function createPicture(){
         closed : false,
         tension : 0.4
     });
-
     var leftEye = new Konva.Circle({
         x: 283,
         y: 161,
@@ -356,7 +361,6 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2
     });
-
     var leftPupil = new Konva.Circle({
         x: 279,
         y: 158,
@@ -392,7 +396,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.4
+        tension : 0.4,
+        name: 'activeElement'
     });
 
     var scarfBottom = new Konva.Line({
@@ -414,7 +419,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.4
+        tension : 0.4,
+        name: 'activeElement'
     });
 
     var rightHand = new Konva.Circle({
@@ -423,7 +429,8 @@ function createPicture(){
         radius: 37,
         fill: '#fff',
         stroke: '#000',
-        strokeWidth: 2
+        strokeWidth: 2,
+        name: 'activeElement'
     });
 
     var leftHand = new Konva.Circle({
@@ -432,7 +439,8 @@ function createPicture(){
         radius: 37,
         fill: '#fff',
         stroke: '#000',
-        strokeWidth: 2
+        strokeWidth: 2,
+        name: 'activeElement'
     });
 
     var stickTop = new Konva.Line({
@@ -446,7 +454,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.1
+        tension : 0.1,
+        name: 'activeElement'
     });
 
     var stickBottom = new Konva.Line({
@@ -460,7 +469,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.1
+        tension : 0.1,
+        name: 'activeElement'
     });
 
     var middleBody = new Konva.Line({
@@ -477,7 +487,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.3
+        tension : 0.3,
+        name: 'activeElement'
     });
 
     var bottomBody = new Konva.Line({
@@ -495,7 +506,8 @@ function createPicture(){
         stroke: '#000',
         strokeWidth: 2,
         closed : true,
-        tension : 0.3
+        tension : 0.3,
+        name: 'activeElement'
     });
 
     var line1 = new Konva.Line({points: [127,163,51,96], stroke: '#000', strokeWidth: 2, closed : false, tension : 1});
@@ -518,66 +530,82 @@ function createPicture(){
 
     var horizontalLine = new Konva.Line({points: [31,316,82,308,165,340,400,305,630,323], stroke: '#000', strokeWidth: 2, closed : false, tension : 0.4});
 
+    // var cloud = new Konva.Line({
+    //     points: [
+    //         404,88,404,88,404,88,
+    //         368,81,
+    //         378,65,
+    //         405,56,
+    //         430,63,430,63,430,63,
+    //         426,50,
+    //         453,40,
+    //         480,44,
+    //         490,55,490,55,490,55,
+    //         504,44,
+    //         535,44,
+    //         555,50,
+    //         550,66,550,66,550,66,
+    //         580,66,
+    //         607,77,
+    //         590,90,
+    //         576,94,576,94,576,94,
+    //         596,100,
+    //         605,115,
+    //         577,122,
+    //         553,116,553,116,553,116,
+    //         554,132,
+    //         536,140,
+    //         511,140,
+    //         495,128,495,128,495,128,
+    //         472,133,
+    //         432,132,
+    //         426,120,
+    //         433,112,433,112,433,112,
+    //         403,114,
+    //         375,100,
+    //         384,90
+    //     ],
+    //     fill: '#fff',
+    //     stroke: 'red',
+    //     strokeWidth: 2,
+    //     closed : true,
+    //     tension : 0.5
+    // });
+
     var cloud = new Konva.Line({
         points: [
-            404,88,404,88,404,88,
-            368,81,
-            378,65,
-            405,56,
-            430,63,430,63,430,63,
-            426,50,
-            453,40,
-            480,44,
-            490,55,490,55,490,55,
-            504,44,
-            535,44,
-            555,50,
-            550,66,550,66,550,66,
-            580,66,
-            607,77,
-            590,90,
-            576,94,576,94,576,94,
-            596,100,
-            605,115,
-            577,122,
-            553,116,553,116,553,116,
-            554,132,
-            536,140,
-            511,140,
-            495,128,495,128,495,128,
-            472,133,
-            432,132,
-            426,120,
-            433,112,433,112,433,112,
-            403,114,
-            375,100,
-            384,90
+            395,86,382,77,376,70,378,66,381,62,391,58,398,57,408,58,417,59,427,61,425,52,434,43,443,39,456,39,470,41,479,44,487,50,489,50,496,49,507,45,521,43,537,44,548,47,556,53,557,57,554,63,560,64,568,65,583,66,595,69,604,73,605,80,602,86,594,90,583,91,592,96,599,100,605,108,598,117,589,121,570,121,555,117,555,127,546,137,534,139,519,139,507,137,501,134,493,127,482,133,468,137,452,137,431,132,424,121,427,115,408,114,391,113,379,106,375,97,383,90,399,86
         ],
         fill: '#fff',
-        stroke: 'red',
+        stroke: 'black',
         strokeWidth: 2,
         closed : true,
-        tension : 0.5
+        tension : 0.5,
+        name: 'activeElement'
     });
+
     var tree = new Konva.Line({
         points: [
-            514,191,
-            583,270,
-            546,270,
-            620,330,
-            566,326,
-            625,370,
-            431,366,
-            480,320,
-            425,315,
-            482,264,
-            432,256
+            512,189,
+            433,256,
+            475,256,
+            433,312,
+            475,312,
+            433,363,
+            588,364,
+            546,312,
+            588,312,
+            546,256,
+            588,256
+
         ],
         fill: '#fff',
         stroke: '#000',
         strokeWidth: 2,
-        closed : true
+        closed : true,
+        name: 'activeElement'
     });
+
 
     layer.add(text);
     layer.add(horizontalLine);
@@ -588,15 +616,15 @@ function createPicture(){
     layer.add(stickTop);
     layer.add(stickBottom);
     layer.add(face);
-     layer.add(leftEye);
-     layer.add(rightEye);
+    layer.add(leftEye);
+    layer.add(rightEye);
     layer.add(smile);
     layer.add(nose);
     layer.add(pompon);
     layer.add(capTop);
     layer.add(capBottom);
-     layer.add(broomTop);
-     layer.add(broomMiddle);
+    layer.add(broomTop);
+    layer.add(broomMiddle);
     layer.add(scarfTop);
     layer.add(scarfBottom);
     layer.add(leftPupil);
@@ -620,6 +648,18 @@ function createPicture(){
 
     layer.add(cloud);
     layer.add(tree);
+
+    testChoiceHandler();
+
+    layer.find('.activeElement').on('click', function() {
+        var color = getActiveTestChoiceColor();
+
+        if(color != null){
+            this.fill(color);
+        }
+
+        layer.draw();
+    });
 
     stage.add(layer);
 }

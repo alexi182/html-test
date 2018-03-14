@@ -269,35 +269,35 @@
 }
 
 .test-choise__brown {
-    border: 3px solid #e9a503;
+    border: 3px solid brown;
 }
 
 .test-choise__dark-blue{
-    border: 3px solid #6147e5;
+    border: 3px solid darkblue;
 }
 
 .test-choise__red{
-    border: 3px solid #e9a503;
+    border: 3px solid red;
 }
 
 .test-choise__dark-purple{
-    border: 3px solid #6147e5;
+    border: 3px solid purple;
 }
 
 .test-choise__white-green{
-    border: 3px solid #7be547;
+    border: 3px solid lightgreen;
 }
 
 .test-choise__white-pink{
-    border: 3px solid #e9037f;
+    border: 3px solid lightpink;
 }
 
 .test-choise__white-blue{
-    border: 3px solid #b1f1fa;
+    border: 3px solid lightblue;
 }
 
 .test-choise__purple{
-    border: 3px solid #e93e03;
+    border: 3px solid #662d91;
 }
 
 .test-choise__green{
