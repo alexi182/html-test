@@ -54,6 +54,42 @@ function createTest(num){
             renderRestoringTheSequenceHorizontal($("#testContainer"));
             break;
         case 3:
+            renderColoringSnowman($("#testContainer"));
+            break;
+        case 4:
+            renderColoringApple($("#testContainer"));
+            break;
+        case 5:
+            renderFindWords($("#testContainer"));
+            break;
+        case 6:
+            renderLabyrinth($("#testContainer"));
+            break;
+        case 7:
+            renderRebusFour($("#testContainer"));
+            break;
+        case 8:
+            renderRebusThree($("#testContainer"));
+            break;
+        case 9:
+            renderRebusRoundAndSquare($("#testContainer"));
+            break;
+        case 10:
+            rednderPuzzle($("#testContainer"));
+            break;
+        case 11:
+            renderDrawByPoints($("#testContainer"));
+            break;
+        case 12:
+            renderCrosswordBirds($("#testContainer"));
+            break;
+        case 13:
+            renderCrossword($("#testContainer"));
+            break;
+        case 14:
+            renderSelectAPicture($("#testContainer"));
+            break;
+        case 15:
             html+="<a class=\"task-help _help\" href=\"#\">\n" +
                 "                                <i class=\"icon icon_nav-question\"></i>\n" +
                 "                            </a>\n" +
@@ -141,42 +177,6 @@ function createTest(num){
                 "\n" +
                 "                            </div>";
             $("#testContainer").html(html);
-            break;
-        case 4:
-            renderColoringSnowman($("#testContainer"));
-            break;
-        case 5:
-            renderColoringApple($("#testContainer"));
-            break;
-        case 6:
-            renderFindWords($("#testContainer"));
-            break;
-        case 7:
-            renderLabyrinth($("#testContainer"));
-            break;
-        case 8:
-            renderRebusFour($("#testContainer"));
-            break;
-        case 9:
-            renderRebusThree($("#testContainer"));
-            break;
-        case 10:
-            renderRebusRoundAndSquare($("#testContainer"));
-            break;
-        case 11:
-            rednderPuzzle($("#testContainer"));
-            break;
-        case 12:
-            renderDrawByPoints($("#testContainer"));
-            break;
-        case 13:
-            renderCrosswordBirds($("#testContainer"));
-            break;
-        case 14:
-            renderCrossword($("#testContainer"));
-            break;
-        case 15:
-            renderSelectAPicture($("#testContainer"));
             break;
     }
 
