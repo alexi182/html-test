@@ -10,27 +10,6 @@
     <link rel="stylesheet" href="new-styles.css">
     <link rel="stylesheet" href="css/lib/dragula.min.css">
 
-    <script src="js/lib/jquery-3.0.0.min.js"></script>
-    <script src="js/lib/dragula.js"></script>
-    <script src="js/lib/jquery-1.12.4.js"></script>
-    <script src="js/lib/jquery-ui.js"></script>
-    <script src="js/lib/jsPlumb-2.1.7-min.js"></script>
-    <script src="js/lib/konva.min.js"></script>
-    <script src="js/renderRestoringTheSequenceVertical.js"></script>
-    <script src="js/renderRestoringTheSequenceHorizontal.js"></script>
-    <script src="js/renderColoringApple.js"></script>
-    <script src="js/renderFindWords.js"></script>
-    <script src="js/renderSelectAPicture.js"></script>
-    <script src="js/renderCrosswordBirds.js"></script>
-    <script src="js/renderRebusRoundAndSquare.js"></script>
-    <script src="js/renderRebusFour.js"></script>
-    <script src="js/renderRebusThree.js"></script>
-    <script src="js/renderDrawByPoints.js"></script>
-    <script src="js/renderLabyrinth.js"></script>
-    <script src="js/renderPuzzle.js"></script>
-    <script src="js/renderCrossword.js"></script>
-    <script src="js/renderColoringSnowman.js"></script>
-    <script src="myscripts.js"></script>
 
     <title>Document</title>
 </head>
@@ -70,17 +49,17 @@
                             <span>Основная часть</span>
                         </div>
                     </a>
-                    <a class="lesson-menu" href="#">
-                        <div class="lesson-nav-item lesson-nav-item_active">
+                    <a class="lesson-menu" href="index.html">
+                        <div class="lesson-nav-item">
                             <svg class="lesson-nav-item__icon i_step-3">
                                 <use xlink:href="#icon-step-3"></use>
                             </svg>
                             <span>Тренировочные задания</span>
                         </div>
                     </a>
-                    <a class="lesson-menu" href="control.html">
-                        <div class="lesson-nav-item ">
-                            <svg class="lesson-nav-item__icon i_step-6">
+                    <a class="lesson-menu" href="#">
+                        <div class="lesson-nav-item lesson-nav-item_active">
+                            <svg class="lesson-nav-item__icon i_step-6 ">
                                 <use xlink:href="#icon-step-6"></use>
                             </svg>
                             <span>Контрольные задания</span>
@@ -94,26 +73,13 @@
             <div class="tests-layout test-meta" data-test-type="trainer">
                 <div class="test__rightcol" id="testDiv">
                     <div class="test-content">
-                        <section class="test__task test__task_active" id="testContainer">
-
+                        <section class="test__task test__task_active" id="testContainer" style="font: normal 32px robotolight, robotolight-2, sans-serif;" align="left">
+                            <ol style="list-style-type: decimal;">
+                            <li style="list-style-type: decimal;"> Методы реализации возможностей письменного общения (обучение письму) с использованием средств ИКТ при прохождении электронного урока.</li> <br><br>
+                            <li style="list-style-type: decimal;"> Наиболее эффективные методики оценивания выполнения тестовых и контрольных заданий для 1 класса и для 2 – 4 классов.</li> <br><br>
+                            <li style="list-style-type: decimal;"> Необходимость разработки рабочей программы и формирование сценарных планов электронного урока (содержание и состав материалов) единым коллективом педагогическим работников (куратор и методическая группа) при реализации программы начальных классов</li>
+                            </ol>
                         </section>
-
-                        <div class="test__buttons-line">
-                            <a href="#" class="lk-form-submit js-clear" data-intro="Нажмите «Сбросить выделенное», чтобы очистить все заполненные поля для ответов">Сбросить выделенное</a>
-                            <a href="#" class="lk-form-submit js-go-to-next-test-btn" data-intro="Нажмите кнопку, чтобы перейти к следующему вопросу">Сохранить и перейти к следующему</a>
-                            <a href="#" class="lk-form-submit js-finish" data-intro="Нажмите «Проверить», чтобы проверить результат">Проверить</a>
-                        </div>
-
-                        <div class="link-arrow-block">
-                            <a href="#" class="link-arrow-left js-go-to-prev-test" style="display: block;">
-                                <i class="icon icon_video-arrow-left"></i>
-                                <span>Назад</span>
-                            </a>
-                            <a href="#" class="link-arrow-right js-go-to-next-test">
-                                <i class="icon icon_video-arrow-right"></i>
-                                <span>Вперед</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
 
