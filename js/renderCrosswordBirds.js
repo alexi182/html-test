@@ -100,7 +100,7 @@ function renderCrosswordBirds($container){
 
     $container.html(html);
 
-    $(".test-words__input").on("change",function(){
+    $(".test-words__input").on("input",function(){
         var $this = $(this);
         var lenNumber = $this.data("number");
 
@@ -131,10 +131,6 @@ function renderCrosswordBirds($container){
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         var marginTopTable = tableY-scrolled;
         var bool = divHeight + divY < tableHeight + scrolled + 10;
-
-        console.log(divHeight, divY, divHeight+divY);
-        console.log(tableHeight+tableY+scrolled);
-        console.log(bool);
 
         if (marginTopTable > 0) {
             document.getElementById('birdCrosswordTable').style.marginTop = "0px";
