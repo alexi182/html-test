@@ -914,7 +914,7 @@ var test_242 = {
         layer.draw();
     },
 
-    getResult: function ($canvas,layer) {
+    getAnswer: function ($canvas,layer) {
         var arr = [], elLetter, colLetter;
 
         layer.find('.activeElement').map(function(el) {

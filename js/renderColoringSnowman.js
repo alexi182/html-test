@@ -38,6 +38,6 @@ function renderColoringSnowman($container){
      test_242.setAnswer($('#container canvas'), layer, globalAnswer);
     $('.js-finish').off();
      $('.js-finish').on('click', function(){
-         globalAnswer = test_242.getResult($('#container canvas'), layer);
+         globalAnswer = test_242.getAnswer($('#container canvas'), layer);
      });
 }
