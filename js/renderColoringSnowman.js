@@ -34,7 +34,7 @@ function renderColoringSnowman($container){
     stage.add(layer);
     layer.find("#nullPoint").remove();
 
-
+    test_242.initTest($('#container canvas'), layer);
      test_242.setAnswer($('#container canvas'), layer, globalAnswer);
     $('.js-finish').off();
      $('.js-finish').on('click', function(){
